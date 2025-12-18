@@ -1,0 +1,437 @@
+/* FOOTLIGHT MT - Regular */
+@font-face {
+  font-family: 'FootlightMT';
+  src: url('fonts/footlight-mt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FOOTLIGHT MT - Light */
+@font-face {
+  font-family: 'FootlightMT';
+  src: url('fonts/footlight-mt-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* FOOTLIGHT MT - Bold Italic */
+@font-face {
+  font-family: 'FootlightMT';
+  src: url('fonts/footlight-mt-bold-italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'FootlightMT', serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+/* Utilidades */
+/* Títulos principales - aplica fuente y color */
+h1, h2, h3, h4 {
+  color: #1e1e1e;
+  font-family: 'Footlight-mt-bold-italic', serif;
+}
+
+/* Estilos individuales para tamaño y peso */
+h1 {
+  font-size: 2.5rem;         /* Título principal más grande */
+  font-weight: bold;       /* Negrita */
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;       /* Subtítulo */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2rem;       /* Encabezado sección o ítems */
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+a,
+a:hover,
+a:focus,
+.footer-col a,
+.footer-col a:hover {
+  text-decoration: none !important;
+}
+
+
+
+/* Header */
+.header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  color: #555;
+}
+
+.btn-reserva {
+  background: #f66b57;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-left: 2rem;
+}
+
+/* Hero */
+.hero {
+  background: url('../img/recursos/gym.png') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background: #f66b57;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Sobre Eliseo */
+.sobre {
+  background: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.beneficios {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.beneficios .item {
+  flex: 1 1 200px;
+  margin: 1rem;
+}
+
+.beneficios img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+/* Frase destacada */
+.frase {
+  background: #eee;
+  text-align: center;
+  padding: 3rem 1rem;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* Facundo */
+.facundo {
+  background: #fff;
+  padding: 4rem 0;
+}
+
+.facundo .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.video {
+  flex: 1;
+}
+
+.video img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.info {
+  flex: 2;
+}
+
+.info ul {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.btn-secondary {
+  background: #f66b57;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Testimonios */
+.testimonios {
+  background: #f5f5f5;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.testimonios-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonio {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  max-width: 300px;
+}
+
+/* CTA Final */
+.cta-final {
+  background: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta-final h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+/* Footer principal con imagen curva como fondo */
+.footer {
+  background: url('../img/recursos/curva-gris.webp') top center no-repeat, #3c2d3d;
+  background-size: cover;
+  color: white;
+  padding: 8rem 1rem 2rem; /* aumentamos padding-top por la curva */
+  text-align: center;
+}
+
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col p,
+.footer-col a,
+.footer-col li {
+  font-weight: 300; /* usa light */
+}
+
+
+.footer-col a:hover {
+  color: #f66b57;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f66b57;
+}
+
+/* Footer inferior */
+.footer-bottom {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-bottom .frase-footer {
+  margin-bottom: 1rem;
+  color: #ddd;
+  font-style: italic;
+}
+
+.footer-bottom-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-bottom-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-bottom-icons a:hover {
+  color: #f66b57;
+}
+
+.creditos {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.creditos-dev {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.3rem;
+}
+
+/* Contenedor del logo y frase */
+.logo-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+.logo-footer img {
+  width: 220px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Frase justo debajo del logo */
+.logo-footer .frase-logo {
+  font-family: 'FootlightMT', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ccc;
+  margin: 0;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col {
+    align-items: center;
+  }
+
+  .footer-col li {
+    justify-content: center;
+  }
+}
+
+.logo {
+  font-family: 'FootlightMT', serif;
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.frase-footer {
+  font-family: 'FootlightMT', serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #ddd;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .beneficios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .facundo .flex {
+    flex-direction: column;
+  }
+
+  .testimonios-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav, .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
