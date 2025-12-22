@@ -3,69 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Eliseo Gym</title>
+  <title>Contacto | ELISEO Gym</title>
   <link rel="stylesheet" href="../css/contacto.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="./img/logos/logo+eliseo+blanco.webp" alt="Eliseo Gym" />
-      </a>
+    <div class="container header-content">
+      <img src="../img/logos/logo+eliseo+blanco.webp" alt="Logo Eliseo" class="logo">
       <nav class="nav">
-        <a href="index.html">Inicio</a>
-        <a href="blog.html">Blog</a>
-        <a href="contacto.html" class="activo">Contacto</a>
+        <a href="../index.html">Inicio</a>
+        <a href="../page/blog.html">Blog</a>
+        <a href="contacto.html" class="active">Contacto</a>
+        <a href="#" class="btn-reserva">Reservá tu clase</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="contacto">
-      <div class="container">
-        <h1>Contacto</h1>
-        <p>Completá el formulario y te responderemos a la brevedad.</p>
-
-        <form id="form-contacto">
-          <input type="text" id="nombre" placeholder="Nombre completo" required />
-          <input type="email" id="email" placeholder="Correo electrónico" required />
-          <textarea id="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
-          <button type="submit" class="btn-enviar">Enviar mensaje</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="logo-footer">
-        <img src="./img/logos/eliseo-blanco.webp" alt="Eliseo Gym">
-        <p class="frase-logo">Entrenamiento con propósito</p>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-icons">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-        <p class="creditos">&copy; ELISEO Gym. Todos los derechos reservados.</p>
-        <p class="creditos-dev">Sitio desarrollado por <strong>Digitanea</strong></p>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Contactanos</h1>
+      <p>¿Querés saber más o tenés una consulta? <br> Estamos para ayudarte.</p>
+      <a href="#formulario" class="btn-consulta">Enviar consulta</a>
+      <div class="info-contacto">
+        <p><a href="https://wa.me/542995777823" target="_blank">+54 299 577 7823</a></p>
+        <p><a href="mailto:info@eliseogym.com">info@eliseogym.com</a></p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById('form-contacto').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre').value;
-      const email = document.getElementById('email').value;
-      const mensaje = document.getElementById('mensaje').value;
-      const subject = `Consulta desde el sitio web - ${nombre}`;
-      const body = `Nombre: ${nombre}%0DEmail: ${email}%0D%0DMensaje:%0D${mensaje}`;
-      window.location.href = `mailto:info@eliseogym.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-    });
-  </script>
+  <!-- Formulario y Preguntas -->
+  <main class="contenido-contacto">
+    <div class="formulario-contacto">
+      <h2>Enviános un mensaje</h2>
+      <form id="formulario" action="https://formspree.io/f/mwkggnwo" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre y apellido" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <select name="motivo">
+          <option>Motivo de consulta</option>
+          <option>Planes de entrenamiento</option>
+          <option>Horarios disponibles</option>
+          <option>Consultas generales</option>
+        </select>
+        <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps?q=Otto+Max+Neuman+3680,+Neuquén+capital&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        <p class="horarios">Consultas Virtuales Online<br>Lunes a viernes, 9:00 - 18:00 hs</p>
+      </div>
+    </div>
+
+    <div class="faq-contacto">
+      <h2>Preguntas Frecuentes</h2>
+      <details>
+        <summary>¿Cuáles son los horarios de los entrenamientos?</summary>
+        <p>De lunes a viernes, 7:00 a 21:00 hs, y los sábados de 9:00 a 13:00 hs.</p>
+      </details>
+      <details>
+        <summary>¿Dónde se encuentra el gimnasio Eliseo?</summary>
+        <p>Otto Max Neuman 3680, Neuquén capital.</p>
+      </details>
+      <details>
+        <summary>¿Ofrecen entrenamientos personalizados?</summary>
+        <p>Sí, ofrecemos evaluación personalizada y planificación según objetivos.</p>
+      </details>
+      <img src="../img/recursos/profe.webp" alt="Foto del gimnasio">
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <!-- Footer principal -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- Columna 1 -->
+   
+<div class="footer-col footer-identidad">
+  <div class="logo-footer">
+    <img src="../img/logos/logo-blanco.webp" alt="Logo Eliseo Gym">
+    <p class="frase-logo">Entrenamiento con propósito</p>
+  </div>
+</div>
+
+
+    <!-- Columna 2 -->
+    <div class="footer-col">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><i class="fas fa-phone"></i> +542995777823</li>
+        <li><i class="fas fa-map-marker-alt"></i>Otto Max Neuman 3680, Neuquén capital</li>
+        <li><i class="fas fa-envelope"></i> info@eliseogym.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Parte inferior -->
+  <div class="footer-bottom">
+    <p class="frase-footer"><em>El rendimiento se construye. Empezá hoy.</em></p>
+    <div class="footer-bottom-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+   <p class="creditos">© ELISEO Gym. Todos los derechos reservados.</p>
+<p class="creditos-dev">Sitio desarrollado por <strong>Digitanea</strong></p>
+
+  </div>
+</footer>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3b3b3b3b3b.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,56 +1,362 @@
-/* Contacto */
-.contacto {
-  background: #f5f5f5;
-  padding: 4rem 1rem;
+/* contacto.css */
+
+@font-face {
+  font-family: 'Footlight MT Light';
+  src: url('../fonts/footlight-mt-light.ttf');
+}
+
+@font-face {
+  font-family: 'Footlight MT Bold Italic';
+  src: url('../fonts/footlight-mt-bold-italic.ttf');
+}
+
+:root {
+  --primary-color: #fa634a;
+  --secondary-color: #3f3140;
+  --text-color: #333;
+  --background-light: #f8f8f8;
+  --font-main: 'Footlight MT Light', sans-serif;
+  --font-bold: 'Footlight MT Bold Italic', serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.nav .active,
+.nav a:hover {
+  color: var(--primary-color);
+}
+
+.btn-reserva {
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: url('../img/recursos/gym.webp') center/cover no-repeat;
+  height: 500px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.contacto h2 {
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-family: var(--font-bold);
   font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.btn-consulta {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 25px;
+  display: inline-block;
+  margin: 15px 0;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Contacto y FAQ */
+.contenido-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: var(--background-light);
+}
+
+.formulario-contacto,
+.faq-contacto {
+  flex: 1 1 400px;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--font-main);
+}
+
+form button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #d94e39;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  margin-top: 20px;
+}
+
+.horarios {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.faq-contacto details {
+  margin: 10px 0;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.faq-contacto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Footer */
+
+/* Footer principal con imagen curva como fondo */
+.footer {
+  background: url('../img/recursos/curva-gris.webp') top center no-repeat, #3c2d3d;
+  background-size: cover;
+  color: white;
+  padding: 8rem 1rem 2rem; /* aumentamos padding-top por la curva */
+  text-align: center;
+}
+
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-col p,
+.footer-col li,
+.footer-col a {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col p,
+.footer-col a,
+.footer-col li {
+  font-weight: 300; /* usa light */
+}
+
+
+.footer-col a:hover {
+  color: #f66b57;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f66b57;
+}
+
+/* Footer inferior */
+.footer-bottom {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footer-bottom .frase-footer {
+  margin-bottom: 1rem;
+  color: #ddd;
+  font-style: italic;
+}
+
+.footer-bottom-icons {
   margin-bottom: 1rem;
 }
 
-.contacto p {
-  color: #555;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-#form-contacto {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-#form-contacto input,
-#form-contacto textarea {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'FootlightMT', serif;
-  font-size: 1rem;
-}
-
-#form-contacto textarea {
-  height: 150px;
-  resize: vertical;
-}
-
-.btn-enviar {
-  background-color: #f66b57;
+.footer-bottom-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
   color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.btn-enviar:hover {
-  background-color: #999;
+.footer-bottom-icons a:hover {
+  color: #f66b57;
+}
+
+.creditos {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.creditos-dev {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.3rem;
+}
+
+/* Contenedor del logo y frase */
+.logo-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+.logo-footer img {
+  width: 220px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Frase justo debajo del logo */
+.logo-footer .frase-logo {
+  
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ccc;
+  margin: 0;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col {
+    align-items: center;
+  }
+
+  .footer-col li {
+    justify-content: center;
+  }
+}
+
+.logo {
+  font-family: 'FootlightMT', serif;
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.frase-footer {
+  font-family: 'FootlightMT', serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #ddd;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .beneficios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .facundo .flex {
+    flex-direction: column;
+  }
+
+  .testimonios-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav, .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
