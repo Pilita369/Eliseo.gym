@@ -318,6 +318,89 @@ a:focus,
   transform: scale(1.03);
 }
 
+/*TARIFAS*/
+.tarifas {
+text-align: center;
+padding: 3rem 1rem;
+background: #eee;
+font-family: var(--font-main);
+}
+
+
+.titulo-seccion {
+font-size: 2rem;
+font-weight: bold;
+color: var(--primary-color);
+font-style: italic;
+}
+
+
+.descripcion-seccion {
+margin-bottom: 2rem;
+color: var(--text-color);
+}
+
+
+.tarjetas-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2rem;
+}
+
+
+.tarjeta {
+background: white;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 2rem;
+width: 280px;
+position: relative;
+overflow: hidden;
+transition: transform 0.3s ease;
+}
+
+
+.tarjeta:hover {
+transform: translateY(-5px);
+}
+
+
+.precio {
+font-size: 1.8rem;
+font-weight: bold;
+color: #000;
+}
+
+
+.btn-reservar {
+display: inline-block;
+margin-top: 1rem;
+padding: 0.5rem 1.2rem;
+background: #333;
+color: #ffff;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.tarjeta:hover .btn-reservar {
+opacity: 1;
+transform: translateY(0);
+}
+
+
+.destacada {
+border: 2px solid var(--primary-color);
+}
+
+
+
+
 /* Responsive: solo un testimonio visible */
 @media (max-width: 768px) {
   .slide {
