@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Eliseo Gym</title>
+  <link rel="stylesheet" href="../css/contacto.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="./img/logos/logo+eliseo+blanco.webp" alt="Eliseo Gym" />
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html" class="activo">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contacto">
+      <div class="container">
+        <h1>Contacto</h1>
+        <p>Completá el formulario y te responderemos a la brevedad.</p>
+
+        <form id="form-contacto">
+          <input type="text" id="nombre" placeholder="Nombre completo" required />
+          <input type="email" id="email" placeholder="Correo electrónico" required />
+          <textarea id="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+          <button type="submit" class="btn-enviar">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="logo-footer">
+        <img src="./img/logos/eliseo-blanco.webp" alt="Eliseo Gym">
+        <p class="frase-logo">Entrenamiento con propósito</p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p class="creditos">&copy; ELISEO Gym. Todos los derechos reservados.</p>
+        <p class="creditos-dev">Sitio desarrollado por <strong>Digitanea</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('form-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      const subject = `Consulta desde el sitio web - ${nombre}`;
+      const body = `Nombre: ${nombre}%0DEmail: ${email}%0D%0DMensaje:%0D${mensaje}`;
+      window.location.href = `mailto:info@eliseogym.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

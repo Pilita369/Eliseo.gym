@@ -93,19 +93,7 @@ a:focus,
   text-align: center;
 }
 
-/* Contenedor del header */
-.container-header {
-  display: flex;
-  flex-direction: column; /* Logo arriba, nav abajo */
-  align-items: center;
-}
 
-/* Logo */
-.logo-nav img {
-  width: 200px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
 
 /* Navegación centrada */
 .nav {
@@ -141,9 +129,9 @@ a:focus,
 
 /* Logo */
 .logo-banner img {
-  width: 450px;
+  width: 500px;
   height: auto;
-  margin-bottom: 20px; /* separación entre logo y frase */
+  margin-bottom: 1px; /* separación entre logo y frase */
 }
 
 /* Frase */
@@ -151,7 +139,8 @@ a:focus,
   font-size: 4rem;
   font-weight: 300;
   color: white;
-  margin: 0;
+  
+  margin-bottom: 3rem;
 }
 
 
@@ -365,7 +354,6 @@ a:focus,
 }
 
 
-/* Footer */
 /* Footer principal con imagen curva como fondo */
 .footer {
   background: url('../img/recursos/curva-gris.webp') top center no-repeat, #3c2d3d;
