@@ -116,25 +116,19 @@ body {
 
 .hero-overlay {
   background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
+  padding: 80px;
   border-radius: 10px;
 }
 
 .hero h1 {
   font-family: var(--font-bold);
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 10px;
 }
+ .hero p{
+    font-size: 1.5rem;
+ }
 
-.btn-consulta {
-  background: var(--primary-color);
-  color: white;
-  padding: 10px 25px;
-  display: inline-block;
-  margin: 15px 0;
-  border-radius: 5px;
-  text-decoration: none;
-}
 
 /* Contacto y FAQ */
 .contenido-contacto {
@@ -164,8 +158,8 @@ form button {
 }
 
 form button {
-  background: var(--primary-color);
-  color: white;
+  background: #ccc;
+  color: rgb(4, 4, 4);
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -197,7 +191,7 @@ form button:hover {
 }
 
 .faq-contacto img {
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -233,7 +227,7 @@ form button:hover {
 .footer-col h3,
 .footer-col h4 {
   margin-bottom: 1rem;
-  color: #fff;
+  color: #ccc;
 }
 
 .footer-col p,

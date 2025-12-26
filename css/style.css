@@ -154,7 +154,7 @@ a:focus,
 
 .sobre h1 {
    font-family: 'FootlightMT', serif;
-  font-size: 2.8rem;     /* Título principal */
+  font-size: 5rem;     /* Título principal */
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -261,7 +261,7 @@ a:focus,
 }
 
 .info ul {
-   
+   font-size: 1.2rem;
   margin: 1rem 0;
   padding-left: 1rem;
 }
@@ -286,7 +286,7 @@ a:focus,
 .carrusel-testimonios {
   position: relative;
   width: 100%;
-  height: 250px; /* <-- AGREGAR ESTA LÍNEA PARA FORZAR ALTURA */
+  height: 250px; /* <-- PARA FORZAR ALTURA */
 }
 
 
@@ -308,7 +308,7 @@ a:focus,
 
 .testimonio {
   flex: 1 1 45%;
-  max-width: 500px; /* <-- AGREGAR ESTA LÍNEA */
+  max-width: 500px; 
   background: #fff;
   padding: 2rem;
   border-radius: 12px;
