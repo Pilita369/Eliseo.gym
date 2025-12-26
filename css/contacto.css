@@ -1,30 +1,47 @@
-/* contacto.css */
-
+/* FOOTLIGHT MT - Regular */
 @font-face {
-  font-family: 'Footlight MT Light';
-  src: url('../fonts/footlight-mt-light.ttf');
+  font-family: 'FootlightMT';
+  src: url('fonts/footlight-mt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+/* FOOTLIGHT MT - Light */
 @font-face {
-  font-family: 'Footlight MT Bold Italic';
-  src: url('../fonts/footlight-mt-bold-italic.ttf');
+  font-family: 'FootlightMT';
+  src: url('fonts/footlight-mt-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
 }
 
-:root {
-  --primary-color: #fa634a;
-  --secondary-color: #3f3140;
-  --text-color: #333;
-  --background-light: #f8f8f8;
-  --font-main: 'Footlight MT Light', sans-serif;
-  --font-bold: 'Footlight MT Bold Italic', serif;
+/* FOOTLIGHT MT - Bold Italic */
+@font-face {
+  font-family: 'FootlightMT';
+  src: url('fonts/footlight-mt-bold-italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
 }
+
+
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 
 body {
-  margin: 0;
-  font-family: var(--font-main);
-  color: var(--text-color);
-  background-color: white;
+  font-family: 'FootlightMT', serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
+
+
 
 .container {
   max-width: 1200px;
@@ -51,6 +68,13 @@ body {
   height: 60px;
 }
 
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav a {
   margin: 0 15px;
   text-decoration: none;
@@ -64,11 +88,19 @@ body {
 }
 
 .btn-reserva {
-  background: var(--primary-color);
-  padding: 10px 20px;
-  border-radius: 5px;
+  background-color: #fa634a;     /* Color coral */
   color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
+
+.btn-reserva:hover {
+  background-color: #c84d37;     /* Más oscuro en hover */
+}
+
 
 /* Hero */
 .hero {
@@ -188,6 +220,10 @@ form button:hover {
   justify-content: space-between;
   text-align: left;
   gap: 2rem;
+}
+
+.footer-col a {
+  text-decoration: none;
 }
 
 .footer-col {

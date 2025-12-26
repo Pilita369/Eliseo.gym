@@ -1,7 +1,9 @@
+/* === TIPOGRAFÍA PERSONALIZADA === */
+
 /* FOOTLIGHT MT - Regular */
 @font-face {
   font-family: 'FootlightMT';
-  src: url('fonts/footlight-mt.ttf') format('truetype');
+  src: url('../fonts/footlight-mt.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +11,7 @@
 /* FOOTLIGHT MT - Light */
 @font-face {
   font-family: 'FootlightMT';
-  src: url('fonts/footlight-mt-light.ttf') format('truetype');
+  src: url('../fonts/footlight-mt-light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
@@ -17,13 +19,10 @@
 /* FOOTLIGHT MT - Bold Italic */
 @font-face {
   font-family: 'FootlightMT';
-  src: url('fonts/footlight-mt-bold-italic.ttf') format('truetype');
+  src: url('../fonts/footlight-mt-bold-italic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
-
-
-
 
 /* Reset básico */
 * {
@@ -32,14 +31,14 @@
   box-sizing: border-box;
 }
 
-
-
+/* Fuente global para todo el body */
 body {
   font-family: 'FootlightMT', serif;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
 }
+
 
 
 /* Utilidades */
@@ -136,6 +135,7 @@ a:focus,
 
 /* Frase */
 .hero-content h2 {
+   font-family: 'FootlightMT', serif;
   font-size: 4rem;
   font-weight: 300;
   color: white;
@@ -152,7 +152,8 @@ a:focus,
   text-align: center; /* Centra todos los textos dentro de .sobre */
 }
 
-.sobre h2 {
+.sobre h1 {
+   font-family: 'FootlightMT', serif;
   font-size: 2.8rem;     /* Título principal */
   font-weight: bold;
   margin-bottom: 1rem;
@@ -217,6 +218,7 @@ a:focus,
 
 /* Frase destacada */
 .frase {
+   font-family: 'FootlightMT', serif;
   background: #eee;
   text-align: center;
   padding: 3rem 1rem;
@@ -226,11 +228,13 @@ a:focus,
 
 /* Facundo */
 .facundo {
+   
   background: #fff;
   padding: 4rem 0;
 }
 
 .facundo .flex {
+   
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -252,10 +256,12 @@ a:focus,
 }
 
 .info {
+   
   flex: 2;
 }
 
 .info ul {
+   
   margin: 1rem 0;
   padding-left: 1rem;
 }
@@ -271,6 +277,7 @@ a:focus,
 
 /* Testimonios */
 .titulo-testimonios {
+   font-family: 'FootlightMT', serif;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -471,6 +478,7 @@ border: 2px solid var(--primary-color);
   color: #ccc;
   font-size: 0.95rem;
   line-height: 1.6;
+  
 }
 
 .footer-col p,
@@ -588,19 +596,9 @@ border: 2px solid var(--primary-color);
   }
 }
 
-.logo {
-  font-family: 'FootlightMT', serif;
-  font-size: 1.8rem;
-  color: white;
-  letter-spacing: 1px;
-}
 
-.frase-footer {
-  font-family: 'FootlightMT', serif;
-  font-style: italic;
-  font-weight: bold;
-  color: #ddd;
-}
+
+
 
 
 /* Responsive */
