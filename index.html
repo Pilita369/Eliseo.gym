@@ -29,7 +29,7 @@
         <img src="./img/logos/logo+eliseo+blanco.webp" alt="Logo Eliseo Gym">
       </div>
     <div class="hero-content">
-      <h2>Transformá tu potencial en rendimiento</h2>
+      <h2>Entrenamiento con propósito</h2>
     </div>
   </section>
 
@@ -65,28 +65,98 @@
     <p>Tu cuerpo, tu herramienta.<br>Tu mente, tu ventaja.</p>
   </section>
 
-<!-- Entrená con Facundo Eliseo -->
-<section class="facundo">
-  <div class="container flex">
-    
-    <div class="imagen-facundo">
-      <img src="./img/recursos/profe.webp" alt="Facundo Eliseo" />
-    </div>
+<!-- ========================= -->
+<!-- SECCIÓN FACUNDO FREIRE -->
+<!-- ========================= -->
+<section class="facundo-seccion">
 
-    <div class="info">
-      <h1>Entrená con Facundo Freire</h1>
-      <p>Profesor de educación física, Entrenador profesional con enfoque técnico, humano y progresivo. Más de 12 años ayudando a atletas y personas activas a alcanzar su mejor versión.</p>
-      <ul>
-        <li><strong>Formación académica:</strong> Intenso background académico y experiencia en tecnificación deportiva.</li>
-        <li><strong>Filosofía de entrenamiento:</strong> Método centrado en la técnica, el cuerpo y la mente del atleta.</li>
-        <li><strong>Frase destacada:</strong> “Cada cuerpo tiene su lenguaje, yo te enseño a escucharlo.”</li>
-      </ul>
-      <a href="#" class="btn-secondary">Conocé su enfoque</a>
+  <div class="facundo-wrapper">
+
+    <!-- Imagen principal -->
+    <div class="facundo-imagen">
+      <img src="./img/recursos/profe.webp" alt="Facundo Freire">
+
+
+      <!-- Botón que activa las tarjetas -->
+      <button class="btn-conocer" id="abrirFacu">
+        Conocé a Facu
+      </button>
     </div>
 
   </div>
+
+  <!-- ========================= -->
+  <!-- OVERLAY TARJETAS (OCULTO) -->
+  <!-- ========================= -->
+  <div class="overlay-facu" id="overlayFacu">
+
+    <div class="facundo-carrusel">
+
+      <!-- Flecha izquierda -->
+      <button class="flecha flecha-izq" id="prevFacu">‹</button>
+
+      <!-- Tarjetas -->
+      <div class="tarjetas-container">
+
+        <!-- TARJETA 1 -->
+        <article class="tarjeta-facu activa">
+          <h3>Formación Académica</h3>
+          <img src="./img/recursos/maestro1.webp" alt="Formación">
+          <p>
+            Licenciado en Educación Física. Formación constante en rendimiento,
+            biomecánica y tecnificación deportiva.
+          </p>
+        </article>
+
+        <!-- TARJETA 2 (CON SUBTARJETA) -->
+        <article class="tarjeta-facu">
+          <h3>Experiencia Profesional</h3>
+          <img src="./img/recursos/maestro2.webp" alt="Experiencia">
+
+          <p>
+            Más de 12 años entrenando atletas, equipos y personas activas,
+            trabajando junto a referentes del deporte.
+          </p>
+
+          <!-- Subtarjeta -->
+          <div class="subtarjeta">
+            <h4>Referentes y tutores</h4>
+            <ul>
+              <li>Horacio Anselmi</li>
+              <li>Alejandro Bertorello</li>
+              <li>Entrenadores y preparadores del alto rendimiento</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- TARJETA 3 -->
+        <article class="tarjeta-facu">
+          <h3>Enfoque Humano</h3>
+          <img src="./img/recursos/maestro3.webp" alt="Enfoque humano">
+          <p>
+            Entrenamiento consciente, escucha activa y acompañamiento real.
+            Cada proceso es único y respetado.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Flecha derecha -->
+     <button class="flecha flecha-der" id="nextFacu">›</button>
+
+      <!-- Botón cerrar -->
+      <button class="cerrar-overlay" id="cerrarFacu">✕</button>
+
+    </div>
+
+  </div>
+
 </section>
 
+
+  </div>
+
+</section>
 
   <!-- Testimonios -->
 <!-- Testimonios -->
@@ -138,13 +208,13 @@
 <p class="descripcion-seccion">Elegí la opción que mejor se adapte a tu entrenamiento.</p>
 <div class="tarjetas-container">
 <div class="tarjeta">
-<h3>Plan 2 días</h3>
+<h3>Plan <br>2 días</h3>
 <p class="precio">$70.000</p>
 <p>Entrená dos veces por semana, con seguimiento personalizado.</p>
 <a href="https://wa.me/542995777823" target="_blank" class="btn-reservar">Reservar</a>
 </div>
 <div class="tarjeta">
-<h3>Plan 3 días</h3>
+<h3>Plan <br>3 días</h3>
 <p class="precio">$100.000</p>
 <p>Entrená tres veces por semana, con seguimiento personalizado.</p>
 <a href="https://wa.me/542995777823" target="_blank" class="btn-reservar">Reservar</a>
@@ -152,7 +222,7 @@
 <div class="tarjeta destacada">
 <h3>Semana completa</h3>
 <p class="precio">$120.000</p>
-<p>Acceso ilimitado durante toda la semana. Ideal para quienes buscan mejorar su rendimiento deportivo.</p>
+<p>Ideal para quienes buscan mejorar su rendimiento deportivo.</p>
 <a href="https://wa.me/542995777823" target="_blank" class="btn-reservar">Reservar</a>
 </div>
 <div class="tarjeta">
@@ -165,12 +235,6 @@
 </section>
 
   
-  <!-- Call to Action Final -->
-  <section class="cta-final">
-    <h2>¿Listo para entrenar con propósito?</h2>
-    <a href="#" class="btn-primary">Quiero entrenar</a>
-  </section>
-
 
 
 <!-- Footer principal -->
@@ -182,7 +246,7 @@
 <div class="footer-col footer-identidad">
   <div class="logo-footer">
     <img src="img/logos/logo-blanco.webp" alt="Logo Eliseo Gym">
-    <p class="frase-logo">Entrenamiento con propósito</p>
+    <p class="frase-logo">Transformá tu potencial en rendimiento.</p>
   </div>
 </div>
 
@@ -248,6 +312,50 @@
   setInterval(avanzarSlide, 6000);
 </script>
 
+<script>
+// =========================
+// ABRIR / CERRAR OVERLAY
+// =========================
+
+const abrirBtn = document.getElementById('abrirFacu');
+const cerrarBtn = document.getElementById('cerrarFacu');
+const overlay = document.getElementById('overlayFacu');
+
+abrirBtn.addEventListener('click', () => {
+  overlay.classList.add('activo');
+});
+
+cerrarBtn.addEventListener('click', () => {
+  overlay.classList.remove('activo');
+});
+
+// =========================
+// CARRUSEL
+// =========================
+
+const tarjetas = document.querySelectorAll('.tarjeta-facu');
+const prev = document.getElementById('prevFacu');
+const next = document.getElementById('nextFacu');
+
+let indice = 0;
+
+function mostrarTarjeta(i) {
+  tarjetas.forEach((t, index) => {
+    t.classList.toggle('activa', index === i);
+  });
+}
+
+next.addEventListener('click', () => {
+  indice = (indice + 1) % tarjetas.length;
+  mostrarTarjeta(indice);
+});
+
+prev.addEventListener('click', () => {
+  indice = (indice - 1 + tarjetas.length) % tarjetas.length;
+  mostrarTarjeta(indice);
+});
+
+</script>
 
 </body>
 </html>

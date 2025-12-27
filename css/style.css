@@ -226,53 +226,161 @@ a:focus,
   font-size: 2rem;
 }
 
-/* Facundo */
-.facundo {
-   
-  background: #fff;
-  padding: 4rem 0;
+/* ========================= */
+/* IMAGEN FACUNDO */
+/* ========================= */
+
+.facundo-seccion {
+  padding: 5rem 1rem;
 }
 
-.facundo .flex {
-   
+.facundo-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.imagen-facundo {
-  flex: 1;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.imagen-facundo img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.facundo-imagen {
+  position: relative;
 }
 
-.info {
-   
-  flex: 2;
+.facundo-imagen img {
+  width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-.info ul {
-   font-size: 1.2rem;
-  margin: 1rem 0;
-  padding-left: 1rem;
-}
 
-.btn-secondary {
+/* Botón conocer */
+.btn-conocer {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #f66b57;
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  display: inline-block;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+
+  /* Tipografía de Eliseo */
+  font-family: 'FootlightMT', serif;
+  font-size: 1.1rem;
+
+  /* Sombra para dar efecto flotante */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-conocer:hover {
+  background-color: #e05646;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ========================= */
+/* OVERLAY */
+/* ========================= */
+
+.overlay-facu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.overlay-facu.activo {
+  display: flex;
+}
+
+/* ========================= */
+/* CARRUSEL */
+/* ========================= */
+
+.facundo-carrusel {
+  position: relative;
+  width: 520px;
+}
+
+.tarjetas-container {
+  position: relative;
+  height: 420px;
+}
+
+.tarjeta-facu {
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+.tarjeta-facu.activa {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tarjeta-facu img {
+  width: 200px;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+/* ========================= */
+/* SUBTARJETA */
+/* ========================= */
+
+.subtarjeta {
   margin-top: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+}
+
+.subtarjeta h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* ========================= */
+/* FLECHAS */
+/* ========================= */
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f66b57;
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.flecha-izq { left: -60px; }
+.flecha-der { right: -60px; }
+
+/* Cerrar */
+.cerrar-overlay {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 /* Testimonios */
@@ -301,7 +409,7 @@ a:focus,
   transition: opacity 0.6s ease;
 }
 
-.slide.activo {
+.slide.activo { 
   opacity: 1;
   pointer-events: auto;
 }
@@ -330,15 +438,15 @@ a:focus,
 text-align: center;
 padding: 3rem 1rem;
 background: #eee;
-font-family: var(--font-main);
+font-family: 'FootlightMT', serif;
 }
 
 
 .titulo-seccion {
-font-size: 2rem;
+font-size: 3rem;
 font-weight: bold;
 color: var(--primary-color);
-font-style: italic;
+font-family: 'FootlightMT', serif;
 }
 
 
@@ -384,7 +492,7 @@ color: #000;
 display: inline-block;
 margin-top: 1rem;
 padding: 0.5rem 1.2rem;
-background: #333;
+background: #f66b57;
 color: #ffff;
 text-decoration: none;
 border-radius: 8px;
